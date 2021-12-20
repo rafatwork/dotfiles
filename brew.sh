@@ -2,6 +2,10 @@
 
 # Install command-line tools and apps.
 
+# Install Rosetta  since it’s required by some applications we’ll
+# be installing.
+softwareupdate --install-rosetta --agree-to-license
+
 # Check for Homebrew and install if we don’t have it.
 if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
