@@ -44,7 +44,7 @@ brew install gnu-sed
 export PATH=$(brew --prefix gnu-sed)/libexec/gnubin:$PATH
 # Install a modern version of Bash.
 brew install bash
-brew install bash-completion2
+brew install bash-completion@2
 
 # Switch to using brew-installed bash as default shell
 if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
