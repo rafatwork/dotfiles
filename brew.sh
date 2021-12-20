@@ -2,13 +2,17 @@
 
 # Install command-line tools and apps.
 
+# Activate sudo for the remainder of the installation.
+sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 # Install Rosetta  since it’s required by some applications we’ll
 # be installing.
 softwareupdate --install-rosetta --agree-to-license
 
 # Check for Homebrew and install if we don’t have it.
 if test ! $(which brew); then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null
 
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
   eval "$(/opt/homebrew/bin/brew shellenv)"
