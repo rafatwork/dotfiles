@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Make sure Homebrew is always added to PATH.
+mkdir -p /opt/homebrew/bin
+export PATH="/opt/homebrew/bin:$PATH"
+mkdir -p /opt/homebrew/sbin
+export PATH="/opt/homebrew/sbin:$PATH"
