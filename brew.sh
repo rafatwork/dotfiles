@@ -128,7 +128,6 @@ brew install zopfli
 
 # Development
 brew install composer
-brew install mutagen-io/mutagen/mutagen
 brew install mutagen-io/mutagen/mutagen-compose-beta
 brew install nvm
 brew install yarn
