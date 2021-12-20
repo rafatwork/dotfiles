@@ -150,7 +150,6 @@ brew install --cask obsidian
 brew install --cask onedrive
 brew install --cask pdfsam-basic
 brew install --cask phpstorm
-brew install --cask sketchup-pro
 brew install --cask slack
 brew install --cask spotify
 brew install --cask teamviewer
