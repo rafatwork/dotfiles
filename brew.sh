@@ -139,7 +139,7 @@ brew install --cask firefox
 brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask insomnia
-brew install --cask keepassx
+brew install --cask macpass
 brew install --cask microsoft-edge
 brew install --cask microsoft-excel
 brew install --cask microsoft-outlook
