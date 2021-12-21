@@ -59,7 +59,6 @@ brew install wget
 brew install gnupg
 
 # Install more recent versions of some macOS tools.
-brew install vim
 brew install grep
 brew install openssh
 brew install screen
