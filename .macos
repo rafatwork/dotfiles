@@ -248,7 +248,7 @@ sudo pmset -c standby 0
 sudo pmset -b standby 1
 
 # Set standby delay to 120 minutes
-sudo pmset -b standbydelay 120
+sudo pmset -b standbydelay 10800
 
 ###############################################################################
 # Screen                                                                      #
