@@ -177,42 +177,44 @@ sudo systemsetup -settimezone "Europe/Brussels" > /dev/null
 # Energy saving                                                               #
 ###############################################################################
 
+# Restart automatically if the computer freezes
+sudo systemsetup -setrestartfreeze on
+
 # Enable lid wakeup
 sudo pmset -a lidwake 1
+
+# Disable waking the machine when power source (AC/battery) is changed
+sudo pmset -a acwake 0
+
+# Enable machine sleep even when there are active tty's (e.g. remote login sessions)
+sudo pmset -a ttyskeepawake 0
+
+# Disable dark wakes.
+sudo pmset -a darkwakes 0
 
 # Restart automatically on power loss
 sudo pmset -a autorestart 1
 
-# Restart automatically if the computer freezes
-sudo systemsetup -setrestartfreeze on
-
 # Sleep the display after 15 minutes
 sudo pmset -a displaysleep 15
+
+# Enable full hibernation mode
+sudo pmset -a hibernatemode 25
 
 # Disable machine sleep while charging
 sudo pmset -c sleep 0
 
-# Set machine sleep to 5 minutes on battery
-sudo pmset -b sleep 5
+# Sleep the machine after 15 minutes on battery
+sudo pmset -b sleep 15
 
-# Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 86400
+# Disable standby while charging
+sudo pmset -c standby 0
 
-# Never go into computer sleep mode
-sudo systemsetup -setcomputersleep Off > /dev/null
+# Enable standby while on battery
+sudo pmset -b standby 1
 
-# Hibernation mode
-# 0: Disable hibernation (speeds up entering sleep mode)
-# 3: Copy RAM to disk so the system state can still be restored in case of a
-#    power failure.
-sudo pmset -a hibernatemode 0
-
-# Remove the sleep image file to save disk space
-sudo rm /private/var/vm/sleepimage
-# Create a zero-byte file instead…
-sudo touch /private/var/vm/sleepimage
-# …and make sure it can’t be rewritten
-sudo chflags uchg /private/var/vm/sleepimage
+# Set standby delay to 120 minutes
+sudo pmset -b standbydelay 120
 
 ###############################################################################
 # Screen                                                                      #
