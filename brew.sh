@@ -155,6 +155,7 @@ brew install --cask teamviewer
 brew install --cask the-unarchiver
 brew install --cask visual-studio-code
 brew install --cask vlc
+brew install --cask cyberduck
 
 # Remove outdated versions from the cellar.
 brew cleanup
