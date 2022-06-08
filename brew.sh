@@ -153,7 +153,6 @@ brew install --cask slack
 brew install --cask spotify
 brew install --cask teamviewer
 brew install --cask the-unarchiver
-brew install --cask transmit
 brew install --cask visual-studio-code
 brew install --cask vlc
 
